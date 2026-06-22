@@ -47,11 +47,11 @@ pip install -r requirements.txt
 
 This repository ships two ways to run the framework:
 
-1. **Demo mode** (`--quick-demo`) — an aggressively-shrunk synthetic instance (15 zones, 1-hour planning horizon, 1-hour look-ahead, a single rolling-horizon window, a 30-second MIP time cap, and a 5% gap tolerance) for showing the *solution process* quickly. Total wall-clock under one minute on a typical Gurobi license.
-2. **Full case study** — the 50-zone Rotterdam instance reported in the paper.
+1. **Demo mode** (`--quick-demo`) — a shrunk synthetic instance (30-second MIP time cap, and a 5% gap tolerance) for showing the *solution process* quickly. Total wall-clock under one minute on a typical Gurobi license.
+2. **Synthetic Full case study** — A case similar to the 50-zone shared e-scooter instance reported in the paper.
 
 > ⚠️ **Disclaimer on the demo.**
-> `--quick-demo` is synthetic. It shrinks every axis that drives MIP solve time (zone count, planning horizon, look-ahead, number of rolling-horizon windows) and caps the per-MIP Gurobi time and optimality gap. The resulting service levels, costs, and incentive plans show **only that the pipeline runs end-to-end**; they are *not* the numbers reported in the paper, are not directly comparable across strategies, and should not be cited as case-study results.
+> `--quick-demo` is synthetic. It shrinks every axis that drives MIP solve time and caps the per-MIP Gurobi time and optimality gap. The resulting service levels, costs, and incentive plans show **only that the pipeline runs end-to-end**; they are *not* the numbers reported in the paper, are not directly comparable across strategies, and should not be cited as case-study results.
 
 ### Demo mode (fast, synthetic, illustrative)
 

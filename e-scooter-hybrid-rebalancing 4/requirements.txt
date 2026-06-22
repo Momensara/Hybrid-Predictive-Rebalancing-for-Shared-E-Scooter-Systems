@@ -1,6 +1,0 @@
-numpy>=1.23
-pandas>=1.5
-scipy>=1.9
-h3>=3.7,<4.0
-gurobipy>=10.0
-openpyxl>=3.1

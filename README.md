@@ -15,7 +15,7 @@ battery state — rather than physical inventory alone. Decisions are made in
 a rolling-horizon scheme driven by Markovian state forecasts of expected
 demand loss (EDL) over a forward-looking window.
 
-This release considers 50 geo-fenced zones to showcase the case study used in the paper. The
+This release considers 50 geo-fenced zones to showcase the case study used in the paper (the data are synthetic). The
 framework runs three core strategies:
 
 | Strategy | Truck relocation | Battery swap | User incentives |
@@ -130,9 +130,7 @@ Results are written under `results/<config>/`:
 --mip-gap-tol FLOAT      Per-MIP target optimality gap (e.g. 0.05 = 5%).
                          Default: tight (Gurobi default ≈ 1e-4).
 
---quick-demo             Run a small synthetic instance fast: 15 zones, 1-h
-                         plan, 1-h look-ahead, 1 rolling-horizon window,
-                         EUR 300 budget, 30 s per-MIP cap, 5% gap tolerance.
+--quick-demo             Run a small synthetic instance fast: 30 s per-MIP cap, 5% gap tolerance.
                          Illustrative only; does not reproduce paper results.
 
 --run-tag STR            Free-form tag attached to every output row
